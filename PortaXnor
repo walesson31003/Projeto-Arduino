@@ -1,0 +1,17 @@
+int estadoEntradaA = 0; //Inicializando a variavel de estado digital A
+int estadoEntradaB = 0; //Inicializando a variavel de estado da entrada digital B
+int estadoSaida = 0; //Inicializando a variavel de estado da saida digital
+
+void setup() {
+  pinMode (estadoSaida, OUTPUT); //Configurando um pino com a saida digital
+  pinMode(estadoEntradaA, INPUT); //Configurando um pino com entrada digital
+  pinMode(estadoEntradaB, INPUT);//Configurando um pino como entrada digital
+  
+
+}
+
+void loop() { //O processo abaixo será repetido infinitamente, a cada ciclo de clock  
+  estadoEntradaA = digitalRead(estadoEntradaA); //Lê o estado da entrada A
+  estadoEntradaB = digitalRead(estadoEntradaB); //Lê o estado da entrada B
+  estadoSaida = !(estadoEntradaA ^ estadoEntradaB); //Faz a operação lógica XOR (Ou exclusivo) entre A e B
+}
