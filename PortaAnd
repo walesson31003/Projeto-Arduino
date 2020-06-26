@@ -1,4 +1,4 @@
-Porta_AND
+
 int ledPin = 13; //led no pino 13
  int V1 = 2; //Variavel 1
  int V2 = 4; //Variavel 2
