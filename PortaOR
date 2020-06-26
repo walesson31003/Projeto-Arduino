@@ -1,4 +1,4 @@
-Porta_OU
+
 #define A 2 //Define a porta para a entrada lógica A
 #define B 3 //Define a porta para a entrada lógica B
 #define saida 4 //Define a porta para a saida lógica (resultado)
