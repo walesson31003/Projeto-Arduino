@@ -1,0 +1,25 @@
+Porta_AND
+int ledPin = 13; //led no pino 13
+ int V1 = 2; //Variavel 1
+ int V2 = 4; //Variavel 2
+ int EV1 = 0;  //Estudo da variavel 1
+ int EV2 = 0;  //Estudo da variavel 2
+
+void setup() {
+ pinMode(ledPin, OUTPUT); //Pino do led será a saída
+ pinMode(V1 , INPUT); //Pino com botão será entrada
+ pinMode(V2 , INPUT); //Pino com botão será entrada 
+
+}
+
+void loop() {
+ EV1 = digitalRead(V1);
+ EV2 = digitalRead(V2);
+  //Teste AND
+  if ((EV1 == HIGH) && (EV2 == HIGH)) {
+    digitalWrite(ledPin, HIGH); //acende
+  } else{
+    digitalWrite(ledPin, LOW); //apaga
+  }
+
+}
