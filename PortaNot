@@ -1,0 +1,22 @@
+#define A 2 //Define a porta para a entrada lógica A
+#define B 3 //Define a porta para a entrada lógica B
+#define saida 4 //Define a porta para a saida lógica (resultado)
+
+int estadoEntradaA = 0; //Inicia a variavel de estado da entrada digital A
+int estadoEntradaB = 0; //Inicia a variavel de estado da entrada digital B
+int estadoSaida = 0; //Inicia a variavel de estado da saída digital
+
+void setup() {
+
+  pinMode(saida, OUTPUT);  //Configura um pino com a saída digital
+  pinMode(A, INPUT); //Configura um pino com a entrada digital
+  pinMode(B,INPUT); //Configura um pino com a entrada digital
+
+}
+
+void loop() {
+  
+  estadoEntradaA = digitalRead(A); //Lê o estado de entrada A
+  estadoEntradaB = digitalRead(B); //Lê o estado de entrada B
+  estadoSaida = !estadoEntradaA; //Faz a operação lógica NOT (inversa) na entrada A
+}
